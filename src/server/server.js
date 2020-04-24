@@ -7054,8 +7054,8 @@ var websockets = (() => {
             util.log((new Date()) + ". Joint HTTP+Websocket server turned on, listening on port "+server.address().port + ".");
         });
     } else {
-        config.port = c.port || process.env.PORT; 
-        util.log((new Date()) + 'Websocket server turned on, listening on port ' + c.port || process.env.PORT + '.'); 
+        config.port = c.port; 
+        util.log((new Date()) + 'Websocket server turned on, listening on port ' + c.port + '.'); 
     }
     // Build it
     return new WebSocket.Server(config);
