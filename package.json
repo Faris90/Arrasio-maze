@@ -2,6 +2,10 @@
   "name": "arras-io",
   "version": "1.0.0",
   "description": "A fanmade sequel to diep.io",
+   "engines": {
+    "node": "v10.15.3",
+    "npm": "6.4.1"
+  },
   "main": "server/server.js",
   "scripts": {
     "start": "gulp run"
