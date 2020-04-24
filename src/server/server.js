@@ -7050,12 +7050,12 @@ var websockets = (() => {
     // Configure the websocketserver
     let config = { server: server };
     if (c.servesStatic) {
-        server.listen(c.port, function httpListening() {
+        server.listen(c.port || process.env.PORT, function httpListening() {
             util.log((new Date()) + ". Joint HTTP+Websocket server turned on, listening on port "+server.address().port + ".");
         });
     } else {
-        config.port = c.port; 
-        util.log((new Date()) + 'Websocket server turned on, listening on port ' + c.port + '.'); 
+        config.port = c.port || process.env.PORT; 
+        util.log((new Date()) + 'Websocket server turned on, listening on port ' + c.port || process.env.PORT + '.'); 
     }
     // Build it
     return new WebSocket.Server(config);
