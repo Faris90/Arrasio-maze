@@ -7050,7 +7050,7 @@ var websockets = (() => {
     // Configure the websocketserver
     let config = { server: server };
     if (c.servesStatic) {
-        server.listen(c.port || process.env.PORT, function httpListening() {
+        server.listen(process.env.PORT || 3000, function httpListening() {
             util.log((new Date()) + ". Joint HTTP+Websocket server turned on, listening on port "+server.address().port + ".");
         });
     } else {
@@ -7060,6 +7060,7 @@ var websockets = (() => {
     // Build it
     return new WebSocket.Server(config);
 })().on('connection', sockets.connect); 
+
 
 // Bring it to life
 setInterval(gameloop, room.cycleSpeed);
