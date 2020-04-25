@@ -2,10 +2,6 @@
   "name": "arras-io",
   "version": "1.0.0",
   "description": "A fanmade sequel to diep.io",
-   "engines": {
-    "node": "v10.15.3",
-    "npm": "6.4.1"
-  },
   "main": "server/server.js",
   "scripts": {
     "start": "gulp run"
@@ -15,7 +11,7 @@
   "contributors": [
     "nepphhhh <nephdev@gmail.com>"
   ],
-   "dependencies": {
+  "dependencies": {
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-preset-es2015": "^6.24.1",
@@ -48,8 +44,9 @@
     "simple-quadtree": "^0.1.3",
     "webpack": "^1.4.0",
     "webpack-stream": "^3.2.0",
-    "ws": "^3.3.2",
-    "natives": "^1.1.6",
-    "socket.io": "^2.0.1"
+    "ws": "^3.3.2"
   },
-
+  "engines": {
+    "node": "8.x"
+  }
+}
